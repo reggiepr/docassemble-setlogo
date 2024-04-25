@@ -1,0 +1,13 @@
+metadata:
+  title: Logo title
+  documentation: "https://docassemble.org/docs/functions.html#set_parts"
+  example start: 1
+  example end: 2
+---
+objects:
+  - company_logo: DAStaticFile.using(filename='br_logo.png')
+---
+mandatory: True
+code: |
+  set_parts(title='Blue Ribbon Real Estates.', logo='<a href="/"><img src="' + company_logo.url_for() + '" style="height: 40px;"></a>')
+---
